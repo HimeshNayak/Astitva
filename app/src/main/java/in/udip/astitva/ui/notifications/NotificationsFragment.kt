@@ -1,4 +1,4 @@
-package in.udip.astitva.ui.notifications
+package `in`.udip.astitva.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
