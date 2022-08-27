@@ -1,6 +1,8 @@
 package `in`.udip.astitva.ui.form
 
+import `in`.udip.astitva.HomeActivity
 import `in`.udip.astitva.databinding.ActivityFormBinding
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -17,5 +19,12 @@ class FormActivity: AppCompatActivity() {
 
         val recyclerView: RecyclerView = binding.questionRecyclerView
         recyclerView.adapter = FormAdapter(this)
+
+        val formNextButton = binding.formNextButton
+        formNextButton.setOnClickListener{
+            val intent = Intent(this@FormActivity, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
