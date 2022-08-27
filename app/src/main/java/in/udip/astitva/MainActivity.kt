@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, FormActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 2500)
 
 
 
