@@ -9,6 +9,7 @@
         android:id="@+id/form_intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/fill_form"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -17,18 +18,21 @@
         android:layout_marginTop="@dimen/activity_vertical_margin"
         tools:text="Please fill out the following form."/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/question_recycler_view"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/form_question"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:defaultNavHost="true"
         app:layout_constraintTop_toBottomOf="@id/form_intro"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:orientation="horizontal"
-        android:scrollbars="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navGraph="@navigation/form_graph"
         />
 
     <Button
+        android:id="@+id/form_back_button"
         android:layout_width="@dimen/form_button_width"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,6 +42,7 @@
         android:layout_marginBottom="@dimen/activity_vertical_margin"/>
 
     <Button
+        android:id="@+id/form_next_button"
         android:layout_width="@dimen/form_button_width"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
