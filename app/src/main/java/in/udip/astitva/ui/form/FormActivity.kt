@@ -1,7 +1,9 @@
 package `in`.udip.astitva.ui.form
 
 import `in`.udip.astitva.R
+import `in`.udip.astitva.HomeActivity
 import `in`.udip.astitva.databinding.ActivityFormBinding
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -65,5 +67,14 @@ class FormActivity: AppCompatActivity() {
                     R.id.action_disabilityQuestionFragment_to_ageQuestionFragment)
                 questionNumber-- }
         }
+        val recyclerView: RecyclerView = binding.questionRecyclerView
+        recyclerView.adapter = FormAdapter(this)
+
+        val formNextButton = binding.formNextButton
+        formNextButton.setOnClickListener{
+            val intent = Intent(this@FormActivity, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
