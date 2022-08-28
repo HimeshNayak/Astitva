@@ -20,7 +20,7 @@ class FormActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        supportActionBar?.hide()
         Log.d("FormActivity", "Form Activity started")
 
         binding = ActivityFormBinding.inflate(layoutInflater)
