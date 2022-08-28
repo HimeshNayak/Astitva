@@ -53,6 +53,11 @@ class FormActivity: AppCompatActivity() {
                 view.findNavController().navigate(
                     R.id.action_ageQuestionFragment_to_disabilityQuestionFragment)
                 questionNumber++ }
+            3 -> {
+                val intent = Intent(this@FormActivity, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
     }
 
@@ -66,14 +71,6 @@ class FormActivity: AppCompatActivity() {
                 view.findNavController().navigate(
                     R.id.action_disabilityQuestionFragment_to_ageQuestionFragment)
                 questionNumber-- }
-        }
-        val recyclerView: RecyclerView = binding.questionRecyclerView
-        recyclerView.adapter = FormAdapter(this)
-
-        val formNextButton = binding.formNextButton
-        formNextButton.setOnClickListener{
-            val intent = Intent(this@FormActivity, HomeActivity::class.java)
-            startActivity(intent)
         }
 
     }
