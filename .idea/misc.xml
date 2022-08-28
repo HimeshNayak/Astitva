@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyProjects/AndroidStudio/Astitva/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.195" />
+        <entry key="..\:/MyProjects/AndroidStudio/Astitva/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyProjects/AndroidStudio/Astitva/app/src/main/res/layout/fragment_dashboard.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/HimeshNayak/AndroidStudioProjects/Astitva/app/src/main/res/layout/activity_form.xml" value="0.25" />
         <entry key="..\:/Users/HimeshNayak/AndroidStudioProjects/Astitva/app/src/main/res/layout/activity_home.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/HimeshNayak/AndroidStudioProjects/Astitva/app/src/main/res/layout/activity_main.xml" value="0.1" />
