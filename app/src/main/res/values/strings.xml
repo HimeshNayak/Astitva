@@ -4,6 +4,18 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_account">Account</string>
     <string name="title_notifications">Notifications</string>
+    <string name="fill_form">Please fill out the following form</string>
     <string name="previous">Previous</string>
     <string name="next">Next</string>
+    <string name="enter_name">Please enter your name</string>
+    <string name="enter_age">Please enter your age</string>
+    <string name="enter_disability">Please select your disability</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+    <string name="visually_impaired">Visual Impairment</string>
+    <string name="hearing_impaired">Hearing Impairment</string>
+    <string name="speech_impaired">Speech Impairment</string>
+    <string name="physical_handicap">Physically Handicapped</string>
+    <string name="cerebral_palsy">Cerebral Palsy</string>
 </resources>

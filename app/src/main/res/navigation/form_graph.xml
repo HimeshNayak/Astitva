@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/form_graph.xml"
+    app:startDestination="@id/nameQuestionFragment">
+
+    <fragment
+        android:id="@+id/nameQuestionFragment"
+        android:name="in.udip.astitva.ui.form.NameQuestionFragment"
+        android:label="NameQuestionFragment"
+        tools:layout="@layout/fragment_name_question">
+        <action
+            android:id="@+id/action_nameQuestionFragment_to_ageQuestionFragment"
+            app:destination="@id/ageQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ageQuestionFragment"
+        android:name="in.udip.astitva.ui.form.AgeQuestionFragment"
+        android:label="AgeQuestionFragment"
+        tools:layout="@layout/fragment_age_question">
+        <action
+            android:id="@+id/action_ageQuestionFragment_to_disabilityQuestionFragment"
+            app:destination="@id/disabilityQuestionFragment" />
+        <action
+            android:id="@+id/action_ageQuestionFragment_to_nameQuestionFragment"
+            app:destination="@id/nameQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/disabilityQuestionFragment"
+        android:name="in.udip.astitva.ui.form.DisabilityQuestionBinding"
+        android:label="DisabilityQuestionBinding"
+        tools:layout="@layout/fragment_disability_question">
+        <action
+            android:id="@+id/action_disabilityQuestionFragment_to_ageQuestionFragment"
+            app:destination="@id/ageQuestionFragment" />
+    </fragment>
+</navigation>
