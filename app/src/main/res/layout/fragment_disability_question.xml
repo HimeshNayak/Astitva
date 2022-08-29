@@ -18,7 +18,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textColor="@color/black"/>
 
         <RadioGroup
             android:id="@+id/disability_options"
@@ -26,6 +27,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/question_disability"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:checkedButton="@id/visually_impaired"
             android:orientation="vertical"
             android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -33,31 +35,31 @@
 
             <RadioButton
                 android:id="@+id/visually_impaired"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/visually_impaired"/>
 
             <RadioButton
                 android:id="@+id/hearing_impaired"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/hearing_impaired"/>
 
             <RadioButton
                 android:id="@+id/speech_impaired"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/speech_impaired"/>
 
             <RadioButton
                 android:id="@+id/physical_handicap"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/physical_handicap"/>
 
             <RadioButton
                 android:id="@+id/cerebral_palsy"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/cerebral_palsy"/>
 

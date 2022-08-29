@@ -5,31 +5,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/form_intro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/fill_form"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        tools:text="Please fill out the following form."/>
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="392dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="144dp"
+        android:src="@drawable/account_removebg_preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/form_question"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
         app:defaultNavHost="true"
-        app:layout_constraintTop_toBottomOf="@id/form_intro"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:navGraph="@navigation/form_graph"
-        />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pic"
+        app:navGraph="@navigation/form_graph" />
 
     <Button
         android:id="@+id/form_back_button"
@@ -49,6 +46,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/next"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

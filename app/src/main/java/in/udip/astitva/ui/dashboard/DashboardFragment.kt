@@ -22,6 +22,8 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+
         val dashboardViewModel =
             ViewModelProvider(this).get(DashboardViewModel::class.java)
 
@@ -33,6 +35,7 @@ class DashboardFragment : Fragment() {
             textView.text = it
         }
         return root
+
     }
 
     override fun onDestroyView() {
