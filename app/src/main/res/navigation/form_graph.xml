@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/form_graph.xml"
-    app:startDestination="@id/nameQuestionFragment">
+    app:startDestination="@id/disabilityIdQuestionFragment">
 
     <fragment
         android:id="@+id/nameQuestionFragment"
@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_nameQuestionFragment_to_ageQuestionFragment"
             app:destination="@id/ageQuestionFragment" />
+        <action
+            android:id="@+id/action_nameQuestionFragment_to_disabilityIdQuestionFragment"
+            app:destination="@id/disabilityIdQuestionFragment" />
     </fragment>
     <fragment
         android:id="@+id/ageQuestionFragment"
@@ -34,5 +37,13 @@
         <action
             android:id="@+id/action_disabilityQuestionFragment_to_ageQuestionFragment"
             app:destination="@id/ageQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/disabilityIdQuestionFragment"
+        android:name="in.udip.astitva.ui.form.DisabilityIdQuestionFragment"
+        android:label="DisabilityIdQuestionFragment" >
+        <action
+            android:id="@+id/action_disabilityIdQuestionFragment_to_nameQuestionFragment"
+            app:destination="@id/nameQuestionFragment" />
     </fragment>
 </navigation>
