@@ -47,13 +47,18 @@ class FormActivity: AppCompatActivity() {
         when (questionNumber) {
             1 -> {
                 view.findNavController().navigate(
-                    R.id.action_nameQuestionFragment_to_ageQuestionFragment)
+                    R.id.action_disabilityIdQuestionFragment_to_nameQuestionFragment)
                 questionNumber++ }
             2 -> {
                 view.findNavController().navigate(
-                    R.id.action_ageQuestionFragment_to_disabilityQuestionFragment)
+                    R.id.action_nameQuestionFragment_to_ageQuestionFragment)
                 questionNumber++ }
-            3 -> {
+            3->{
+                view.findNavController().navigate(
+                    R.id.action_ageQuestionFragment_to_disabilityQuestionFragment)
+                questionNumber++
+            }
+            4 -> {
                 val intent = Intent(this@FormActivity, HomeActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -65,9 +70,13 @@ class FormActivity: AppCompatActivity() {
         when( questionNumber) {
             2 -> {
                 view.findNavController().navigate(
-                    R.id.action_ageQuestionFragment_to_nameQuestionFragment)
+                    R.id.action_nameQuestionFragment_to_disabilityIdQuestionFragment)
                 questionNumber-- }
             3 -> {
+                view.findNavController().navigate(
+                    R.id.action_ageQuestionFragment_to_nameQuestionFragment)
+                questionNumber-- }
+            4 -> {
                 view.findNavController().navigate(
                     R.id.action_disabilityQuestionFragment_to_ageQuestionFragment)
                 questionNumber-- }

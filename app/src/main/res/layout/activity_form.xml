@@ -5,11 +5,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <TextView
+        android:id="@+id/question_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="UDIP"
+        android:textColor="@color/black"
+        android:textSize="84sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Technologies"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/pic"
         android:layout_width="392dp"
         android:layout_height="140dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="192dp"
         android:src="@drawable/account_removebg_preview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
@@ -36,7 +61,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/previous"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:backgroundTint="@color/black"/>
 
     <Button
         android:id="@+id/form_next_button"
@@ -46,6 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/next"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:backgroundTint="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

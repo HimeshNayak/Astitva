@@ -33,31 +33,25 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin">
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/visually_impaired"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/visually_impaired"/>
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/hearing_impaired"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/hearing_impaired"/>
 
-            <RadioButton
-                android:id="@+id/speech_impaired"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:text="@string/speech_impaired"/>
-
-            <RadioButton
+            <CheckBox
                 android:id="@+id/physical_handicap"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:text="@string/physical_handicap"/>
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/cerebral_palsy"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
