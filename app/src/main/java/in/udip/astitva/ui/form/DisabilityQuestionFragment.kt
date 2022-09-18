@@ -1,17 +1,18 @@
 package `in`.udip.astitva.ui.form
 
+import `in`.udip.astitva.HomeActivity
 import `in`.udip.astitva.R
-import `in`.udip.astitva.databinding.FragmentNameQuestionBinding
+import `in`.udip.astitva.databinding.FragmentDisabilityQuestionBinding
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 
-class NameQuestionFragment: Fragment() {
+class DisabilityQuestionFragment: Fragment() {
 
-    private var _binding: FragmentNameQuestionBinding? = null
+    private var _binding: FragmentDisabilityQuestionBinding? = null
     val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +20,7 @@ class NameQuestionFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentNameQuestionBinding.inflate(inflater, container, false)
+        _binding = FragmentDisabilityQuestionBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -39,22 +40,14 @@ class NameQuestionFragment: Fragment() {
     }
 
     private fun onNext() {
-        if (binding.firstNameEditText.text.toString() == "") {
-            binding.textField.isErrorEnabled = true
-            binding.textField.error ="@string/invalid_name"
-        }
-        else {
-            binding.textField.isErrorEnabled = false
-            val txn = parentFragmentManager.beginTransaction()
-            txn.replace(R.id.form_question, AgeQuestionFragment())
-            txn.addToBackStack(null)
-            txn.commit()
-        }
+        val ctx = activity
+        val intent = Intent(ctx, HomeActivity::class.java)
+        startActivity(intent)
     }
 
     private fun onBack() {
         val txn = parentFragmentManager.beginTransaction()
-        txn.replace(R.id.form_question, DisabilityIdQuestionFragment())
+        txn.replace(R.id.form_question, AgeQuestionFragment())
         txn.commit()
     }
 }

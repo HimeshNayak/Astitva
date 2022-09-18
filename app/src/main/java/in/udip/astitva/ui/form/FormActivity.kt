@@ -25,62 +25,15 @@ class FormActivity: AppCompatActivity() {
 
         binding = ActivityFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Log.d("FormActivity", "Layount inflated")
+        Log.d("FormActivity", "Layout inflated")
 
         val questionFragment = supportFragmentManager
             .findFragmentById(R.id.form_question) as NavHostFragment
         navController = questionFragment.navController
         Log.d("FormActivity", "NavController initialized")
-
-        val nextBtn = binding.formNextButton
-        nextBtn.setOnClickListener{ onNext(binding.formQuestion) }
-
-        val prevBtn = binding.formBackButton
-        prevBtn.setOnClickListener { onPrev(binding.formQuestion) }
     }
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
-    }
-
-    private fun onNext(view: View) {
-        when (questionNumber) {
-            1 -> {
-                view.findNavController().navigate(
-                    R.id.action_disabilityIdQuestionFragment_to_nameQuestionFragment)
-                questionNumber++ }
-            2 -> {
-                view.findNavController().navigate(
-                    R.id.action_nameQuestionFragment_to_ageQuestionFragment)
-                questionNumber++ }
-            3->{
-                view.findNavController().navigate(
-                    R.id.action_ageQuestionFragment_to_disabilityQuestionFragment)
-                questionNumber++
-            }
-            4 -> {
-                val intent = Intent(this@FormActivity, HomeActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }
-    }
-
-    private fun onPrev(view: View) {
-        when( questionNumber) {
-            2 -> {
-                view.findNavController().navigate(
-                    R.id.action_nameQuestionFragment_to_disabilityIdQuestionFragment)
-                questionNumber-- }
-            3 -> {
-                view.findNavController().navigate(
-                    R.id.action_ageQuestionFragment_to_nameQuestionFragment)
-                questionNumber-- }
-            4 -> {
-                view.findNavController().navigate(
-                    R.id.action_disabilityQuestionFragment_to_ageQuestionFragment)
-                questionNumber-- }
-        }
-
     }
 }

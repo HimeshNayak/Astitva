@@ -8,14 +8,19 @@
     <string name="previous">Back</string>
     <string name="next">Next</string>
     <string name="enter_name">Enter your Name</string>
-    <string name="enter_age">Enter your Age</string>
+    <string name="enter_dob">Enter your Date of Birth</string>
     <string name="enter_disability">Select your Disability</string>
     <string name="first_name">Your Name</string>
-    <string name="disabilityid">Enter Your Disability Id</string>
+    <string name="disability_id">Your Disability ID</string>
+    <string name="enter_disability_id">Enter Your Disability Id</string>
     <string name="age">Age</string>
     <string name="visually_impaired">Visual Impairment</string>
     <string name="hearing_impaired">Hearing Impairment</string>
     <string name="speech_impaired">Speech Impairment</string>
     <string name="physical_handicap">Physically Handicapped</string>
     <string name="cerebral_palsy">Cerebral Palsy</string>
+    <string name="invalid_name">Invalid Name. Please enter a valid name.</string>
+    <string name="invalid_disability_id">Invalid Disability ID. Please enter a valid ID.</string>
+    <string name="udip">UDIP</string>
+    <string name="technologies">Technologies</string>
 </resources>

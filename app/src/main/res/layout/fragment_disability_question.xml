@@ -59,6 +59,32 @@
 
         </RadioGroup>
 
+        <Button
+            android:id="@+id/form_back_button"
+            android:layout_width="@dimen/form_button_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/disability_options"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/previous"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:backgroundTint="@color/black"/>
+
+        <Button
+            android:id="@+id/form_next_button"
+            android:layout_width="@dimen/form_button_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/disability_options"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/next"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:backgroundTint="@color/black"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

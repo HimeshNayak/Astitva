@@ -22,11 +22,14 @@
             android:textColor="@color/black"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/first_name"
+            android:id="@+id/text_field"
+            style="@style/Widget.Astitva.TextInputLayout.OutlinedBox"
             android:layout_width="306dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:hint="@string/first_name"
+            app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
+            app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/question_name">
@@ -35,11 +38,36 @@
                 android:id="@+id/first_name_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords"
+                android:inputType="textPersonName"
                 android:background="@color/white" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Button
+            android:id="@+id/form_back_button"
+            android:layout_width="@dimen/form_button_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_field"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/previous"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:backgroundTint="@color/black"/>
+
+        <Button
+            android:id="@+id/form_next_button"
+            android:layout_width="@dimen/form_button_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_field"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/next"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:backgroundTint="@color/black"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -13,7 +13,7 @@
             android:id="@+id/question_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/enter_age"
+            android:text="@string/enter_dob"
             android:textSize="24sp"
             android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
@@ -21,26 +21,44 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/age"
-            android:layout_width="300dp"
+        <Button
+            android:id="@+id/date_picker"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:hint="@string/age"
+            android:textSize="20sp"
+            android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/question_age"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            style="?android:spinnerStyle"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin">
+            android:onClick="openDatePicker"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/age_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:background="@color/white"
-                />
+        <Button
+            android:id="@+id/form_back_button"
+            android:layout_width="@dimen/form_button_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/date_picker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/previous"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:backgroundTint="@color/black"/>
 
-        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/form_next_button"
+            android:layout_width="@dimen/form_button_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/date_picker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/next"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:backgroundTint="@color/black"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
