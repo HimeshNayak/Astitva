@@ -1,5 +1,6 @@
 package `in`.udip.astitva.ui.form
 
+import `in`.udip.astitva.R
 import `in`.udip.astitva.databinding.FragmentAgeQuestionBinding
 import `in`.udip.astitva.databinding.FragmentDisabilityIdQuestionBinding
 import `in`.udip.astitva.databinding.FragmentDisabilityQuestionBinding
@@ -23,8 +24,31 @@ class DisabilityIdQuestionFragment: Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.disabilityIdEditText.text = null
+
+        val nextBtn = binding.formNextButton
+        nextBtn.setOnClickListener { onNext() }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun onNext() {
+        if (binding.disabilityIdEditText.text.toString() == "") {
+            binding.textField.isErrorEnabled = true
+            binding.textField.error ="@string/invalid_disability_id"
+        }
+        else {
+            binding.textField.isErrorEnabled = false
+            val txn = parentFragmentManager.beginTransaction()
+            txn.replace(R.id.form_question, NameQuestionFragment())
+            txn.addToBackStack(null)
+            txn.commit()
+        }
     }
 }
