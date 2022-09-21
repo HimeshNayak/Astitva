@@ -41,7 +41,7 @@ class DisabilityIdQuestionFragment: Fragment() {
     private fun onNext() {
         if (binding.disabilityIdEditText.text.toString() == "") {
             binding.textField.isErrorEnabled = true
-            binding.textField.error ="@string/invalid_disability_id"
+            binding.textField.error = resources.getString(R.string.invalid_disability_id)
         }
         else {
             binding.textField.isErrorEnabled = false
