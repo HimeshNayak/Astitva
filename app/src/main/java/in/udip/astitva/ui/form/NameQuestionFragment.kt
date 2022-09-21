@@ -41,7 +41,7 @@ class NameQuestionFragment: Fragment() {
     private fun onNext() {
         if (binding.firstNameEditText.text.toString() == "") {
             binding.textField.isErrorEnabled = true
-            binding.textField.error ="@string/invalid_name"
+            binding.textField.error =resources.getString(R.string.invalid_name)
         }
         else {
             binding.textField.isErrorEnabled = false
