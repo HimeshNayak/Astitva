@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import java.util.regex.Pattern
 
 class NameQuestionFragment: Fragment() {
 
@@ -39,14 +40,22 @@ class NameQuestionFragment: Fragment() {
     }
 
     private fun onNext() {
-        if (binding.firstNameEditText.text.toString() == "") {
+        if (binding.firstNameEditText.text.toString() == "" ||
+            !Pattern.matches("^[A-Za-z][A-Za-z ]+$", binding.firstNameEditText.text.toString())) {
             binding.textField.isErrorEnabled = true
             binding.textField.error =resources.getString(R.string.invalid_name)
         }
         else {
             binding.textField.isErrorEnabled = false
+
+            val args: Bundle = requireArguments()
+            args.putString("name", binding.firstNameEditText.text.toString())
+
+            val frag: AgeQuestionFragment = AgeQuestionFragment()
+            frag.arguments = args
+
             val txn = parentFragmentManager.beginTransaction()
-            txn.replace(R.id.form_question, AgeQuestionFragment())
+            txn.replace(R.id.form_question, frag)
             txn.addToBackStack(null)
             txn.commit()
         }

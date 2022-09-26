@@ -52,8 +52,14 @@ class AgeQuestionFragment: Fragment() {
     }
 
     private fun onNext() {
+        val args: Bundle = requireArguments()
+        args.putString("dob", dateButton.text.toString())
+
+        val frag: DisabilityQuestionFragment = DisabilityQuestionFragment()
+        frag.arguments = args
+
         val txn = parentFragmentManager.beginTransaction()
-        txn.replace(R.id.form_question, DisabilityQuestionFragment())
+        txn.replace(R.id.form_question, frag)
         txn.addToBackStack(null)
         txn.commit()
     }

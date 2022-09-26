@@ -5,6 +5,7 @@ import `in`.udip.astitva.R
 import `in`.udip.astitva.databinding.FragmentDisabilityQuestionBinding
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +41,29 @@ class DisabilityQuestionFragment: Fragment() {
     }
 
     private fun onNext() {
+        var disability = ""
+        if (binding.visuallyImpaired.isChecked)
+            disability += R.string.visually_impaired.toString() + ","
+        if (binding.hearingImpaired.isChecked)
+            disability += R.string.hearing_impaired.toString() + ","
+        if (binding.physicalHandicap.isChecked)
+            disability += R.string.physical_handicap.toString() + ","
+        if (binding.cerebralPalsy.isChecked)
+            disability += R.string.cerebral_palsy.toString() + ","
+
+        val args: Bundle = requireArguments()
+        args.putString("disability", disability)
+
+        Log.d("DBH", "Going to open DBHelper")
+        val db = DBHelper(requireContext(), null)
+        db.addName(
+            args.getString("disabilityId")!!,
+            args.getString("name")!!,
+            args.getString("dob")!!,
+            args.getString("disability")!!
+        )
+        Log.d("DBH", "Added data")
+
         val ctx = activity
         val intent = Intent(ctx, HomeActivity::class.java)
         startActivity(intent)

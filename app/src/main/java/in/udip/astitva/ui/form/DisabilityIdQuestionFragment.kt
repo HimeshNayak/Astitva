@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import java.util.regex.Pattern
 
 class DisabilityIdQuestionFragment: Fragment() {
 
@@ -39,14 +40,22 @@ class DisabilityIdQuestionFragment: Fragment() {
     }
 
     private fun onNext() {
-        if (binding.disabilityIdEditText.text.toString() == "") {
+        if (binding.disabilityIdEditText.text.toString() == "" ||
+            !Pattern.matches("[A-Z]{2}[0-9]{16}", binding.disabilityIdEditText.text.toString())) {
             binding.textField.isErrorEnabled = true
             binding.textField.error = resources.getString(R.string.invalid_disability_id)
         }
         else {
             binding.textField.isErrorEnabled = false
+
+            val args: Bundle = Bundle()
+            args.putString("disabilityId", binding.disabilityIdEditText.text.toString())
+
+            val frag: NameQuestionFragment = NameQuestionFragment()
+            frag.arguments = args
+
             val txn = parentFragmentManager.beginTransaction()
-            txn.replace(R.id.form_question, NameQuestionFragment())
+            txn.replace(R.id.form_question, frag)
             txn.addToBackStack(null)
             txn.commit()
         }
