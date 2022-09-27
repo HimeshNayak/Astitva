@@ -23,4 +23,5 @@
     <string name="invalid_disability_id">Invalid Disability ID. Please enter a valid ID.</string>
     <string name="udip">UDIP</string>
     <string name="technologies">Technologies</string>
+    <string name="welcome_greeting">Welcome, %s</string>
 </resources>
