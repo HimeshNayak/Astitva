@@ -43,13 +43,13 @@ class DisabilityQuestionFragment: Fragment() {
     private fun onNext() {
         var disability = ""
         if (binding.visuallyImpaired.isChecked)
-            disability += R.string.visually_impaired.toString() + ","
+            disability += getString(R.string.visually_impaired) + ", "
         if (binding.hearingImpaired.isChecked)
-            disability += R.string.hearing_impaired.toString() + ","
+            disability += getString(R.string.hearing_impaired) + ", "
         if (binding.physicalHandicap.isChecked)
-            disability += R.string.physical_handicap.toString() + ","
+            disability += getString(R.string.physical_handicap) + ", "
         if (binding.cerebralPalsy.isChecked)
-            disability += R.string.cerebral_palsy.toString() + ","
+            disability += getString(R.string.cerebral_palsy)
 
         val args: Bundle = requireArguments()
         args.putString("disability", disability)

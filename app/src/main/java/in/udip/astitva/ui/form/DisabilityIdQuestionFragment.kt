@@ -41,7 +41,7 @@ class DisabilityIdQuestionFragment: Fragment() {
 
     private fun onNext() {
         if (binding.disabilityIdEditText.text.toString() == "" ||
-            !Pattern.matches("[A-Z]{2}[0-9]{16}", binding.disabilityIdEditText.text.toString())) {
+            !Pattern.matches("[A-Z]*[0-9]+", binding.disabilityIdEditText.text.toString())) {
             binding.textField.isErrorEnabled = true
             binding.textField.error = resources.getString(R.string.invalid_disability_id)
         }
